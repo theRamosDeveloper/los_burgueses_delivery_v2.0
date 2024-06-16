@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="banner.jpg" alt="Logo" id="logo">
+        <h1>Hamburgueria Los Burgueses</h1>
+        <p>(55)99225-1393</p>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Bem-vindo(a) à Melhor Hamburgueria Delivery da Cidade!</h2>
+            <p>Deliciosos hambúrgueres feitos com os melhores ingredientes. Entregamos rapidamente na sua porta!</p>
+        </section>
+        
+        
+        <section id="menu">
+            <section id="customer-info">
+                <h2>Informações do Cliente</h2>
+                <label for="customer-name">Nome:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+            </section>
+            <h2>Menu</h2>
+            <div class="menu-item" data-id="1">
+                <h3>SMASH DUPLO</h3>
+                <p>Pão brioche, maionese da casa, 2 blend de carne, 2 queijo cheddar, tomate e cebola.</p>
+                <span>R$22,99</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item" data-id="2">
+                <h3>SALADA</h3>
+                <p>Pão brioche, maionese verde, blend de carne, queijo prato, ovo, alface e tomate.</p>
+                <span>R$23,99</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item" data-id="3">
+                <h3>BACON</h3>
+                <p>Pão brioche, maionese de casa, blend de carne, queijo cheddar, bacon, cebola caramelizada e tomate.</p>
+                <span>R$22,00</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item" data-id="4">
+                <h3>ONION RINGS</h3>
+                <p>Pão brioche, maionese da casa, blend de carne, queijo prato, bacon, onion, alface e tomate.</p>
+                <span>R$26,99</span>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+
+        <section id="extras">
+            <h2>Adicionais</h2>
+            <div class="extras-container">
+                <div class="extra-item" data-id="1">
+                    <h3>Ovo frito</h3>
+                    <span>R$2,00</span>
+                    <button class="add-extra">Adicionar</button>
+                    <button class="remove-extra">Remover</button>
+                </div>
+                <div class="extra-item" data-id="2">
+                    <h3>Blend de carne</h3>
+                    <span>R$5,50</span>
+                    <button class="add-extra">Adicionar</button>
+                    <button class="remove-extra">Remover</button>
+                </div>
+                <div class="extra-item" data-id="3">
+                    <h3>Bacon</h3>
+                    <span>R$3,00</span>
+                    <button class="add-extra">Adicionar</button>
+                    <button class="remove-extra">Remover</button>
+                </div>
+                <div class="extra-item" data-id="4">
+                    <h3>Cheddar</h3>
+                    <span>R$3,00</span>
+                    <button class="add-extra">Adicionar</button>
+                    <button class="remove-extra">Remover</button>
+                </div>
+             </div>
+             <div class="extras">
+                <h2>Porções</h2>
+                <div class="extras-container">
+                    <div class="extra-item" data-id="5">
+                        <h3>Batata Frita M</h3>
+                        <span>R$18,00</span>
+                        <button class="add-extra">Adicionar</button>
+                        <button class="remove-extra">Remover</button>
+                    </div>
+                    <div class="extra-item" data-id="5">
+                        <h3>Batata Frita G</h3>
+                        <span>R$25,00</span>
+                        <button class="add-extra">Adicionar</button>
+                        <button class="remove-extra">Remover</button>
+                    </div>
+                </div>
+             </div>
+             <div class="extras">
+                <h2>Bebidas</h2>
+                <div class="extras-container">
+                    <div class="extra-item" data-id="5">
+                        <h3>Coca Cola lata</h3>
+                        <span>R$5,00</span>
+                        <button class="add-extra">Adicionar</button>
+                        <button class="remove-extra">Remover</button>
+                    </div>
+                    <div class="extra-item" data-id="5">
+                        <h3>Guaraná lata</h3>
+                        <span>R$5,00</span>
+                        <button class="add-extra">Adicionar</button>
+                        <button class="remove-extra">Remover</button>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <div class="delivery-option">
+            <label for="delivery-option">Opção de Entrega:</label>
+            <select id="delivery-option" name="delivery-option" required>
+                <option value="local">Retirar no Local</option>
+                <option value="delivery">Tele Entrega (+R$3,00)</option>
+            </select>
+        </div>
+        
+        <section id="cart">
+            <h2>Seu Carrinho</h2>
+            <div id="cart-items"></div>
+            <div id="total">
+                <p>Total: R$<span id="cart-total">0,00</span></p>
+                <section id="pix">
+                    <h2>Pagamento via PIX</h2>
+                    <p>Chave PIX CPF: <span id="pix-key">04668918067</span></p>
+                    <button id="copy-pix">Copiar Chave PIX</button>
+                    <p class="alert">Depois de finalizar o pedido, envie o comprovante de pagamento via whatsapp.</p>
+                </section>
+                <button id="checkout">Finalizar Pedido</button>
+            </div>
+        </section>
+        <input type="hidden" id="location" name="location">
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Los Burgueses, Jóia RS. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
