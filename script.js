@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const whatsappNumber = '55992251393';
         const cartSummary = cart.map(item => `${item.name}: R$${item.price.toFixed(2).replace('.', ',')}`).join('\n');
         const totalAmount = total.toFixed(2).replace('.', ',');
-        const deliveryFeeMessage = deliveryMethod === 'Tele Entrega' ? 'Entrega: Tele Entrega (R$3,00)' : 'Entrega: Retirar no Local (Grátis)';
+        const deliveryFeeMessage = deliveryMethod === 'Tele Entrega' ? 'Entrega: Tele Entrega' : 'Entrega: Retirar no Local';
 
         let message = `Pedido finalizado!\n\nNome do Cliente: ${customerName}\n\nItens:\n${cartSummary}\n\nTotal: R$${totalAmount}\n\n${deliveryFeeMessage}`;
 
