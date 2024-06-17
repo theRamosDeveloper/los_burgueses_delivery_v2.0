@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     deliveryOption.addEventListener('change', () => {
         if (deliveryOption.value === 'delivery') {
-            deliveryCost = 3.00;
+            deliveryCost = 4.00;
         } else {
             deliveryCost = 0;
         }
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     deliveryOption.addEventListener('change', () => {
         if (deliveryOption.value === 'delivery') {
-            deliveryCost = 3.00;
+            deliveryCost = 4.00;
             deliveryMethod = 'Tele Entrega';
         } else {
             deliveryCost = 0;
